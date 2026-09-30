@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/decimvs/AdfDotNet.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>adfdotnet-mark-512.png</PackageIcon>
     <PackageReleaseNotes>https://github.com/decimvs/AdfDotNet/blob/master/CHANGELOG.md</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
@@ -29,6 +30,7 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" Visible="false" />
     <None Include="$(MSBuildThisFileDirectory)LICENSE.txt" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="$(MSBuildThisFileDirectory)adfdotnet-mark-512.png" Pack="true" PackagePath="\" Visible="false" />
   </ItemGroup>
 
 </Project>
