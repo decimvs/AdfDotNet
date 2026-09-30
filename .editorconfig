@@ -1,0 +1,6 @@
+root = true
+
+[*.cs]
+# License header required at the top of every C# file.
+file_header_template = Copyright (c) 2026 Guillermo Espert Carrasquer. All rights reserved.\nLicensed under the MIT License. See LICENSE.txt in the project root for license information.
+dotnet_diagnostic.IDE0073.severity = suggestion

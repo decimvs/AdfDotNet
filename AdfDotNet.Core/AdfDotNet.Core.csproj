@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>AdfDotNet.Core</PackageId>
+    <Description>Typed .NET document model for the Atlassian Document Format (ADF) used by Jira and Confluence: every node and mark type in the ADF spec, a fluent builder, spec-based validation and normalization.</Description>
+    <PackageTags>adf;atlassian;atlassian-document-format;jira;confluence;rich-text;document-model</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      AdfStructure/AdfContentType/AdfMarkDefinition hold the HTML-tag-to-ADF mapping table, whose attribute
+      extractors are typed against HtmlAgilityPack's HtmlNode.
+    -->
+    <PackageReference Include="HtmlAgilityPack" Version="1.13.0" />
+  </ItemGroup>
+
+</Project>

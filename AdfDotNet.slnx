@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="AdfDotNet.TestingApp/AdfDotNet.TestingApp.csproj" Id="e3555d51-dddb-4418-aac4-dc327088f40a" />
+  <Project Path="AdfDotNet/AdfDotNet.csproj" Id="c9b65214-c21f-405f-addd-512d17db31e1" />
+  <Project Path="AdfDotNet.Core/AdfDotNet.Core.csproj" />
+  <Project Path="AdfDotNet.Converters.Html/AdfDotNet.Converters.Html.csproj" />
+  <Project Path="AdfDotNet.Converters.Markdown/AdfDotNet.Converters.Markdown.csproj" />
+  <Project Path="AdfDotNet.Json.Newtonsoft/AdfDotNet.Json.Newtonsoft.csproj" />
+  <Project Path="AdfDotNet.Tests/AdfDotNet.Tests.csproj" />
+</Solution>

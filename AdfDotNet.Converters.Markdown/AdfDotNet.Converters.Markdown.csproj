@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>AdfDotNet.Converters.Markdown</PackageId>
+    <Description>Markdown to Atlassian Document Format (ADF) conversion and back for AdfDotNet, built on Markdig (CommonMark + GFM). Usable statically or through dependency injection.</Description>
+    <PackageTags>adf;atlassian;atlassian-document-format;jira;confluence;markdown;commonmark;gfm;converter</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.37.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdfDotNet.Core\AdfDotNet.Core.csproj" />
+    <!-- AdfToMarkdownConverter.ConvertAdf(string) parses ADF JSON through AdfJsonConverter.Deserialize. -->
+    <ProjectReference Include="..\AdfDotNet.Json.Newtonsoft\AdfDotNet.Json.Newtonsoft.csproj" />
+  </ItemGroup>
+
+</Project>

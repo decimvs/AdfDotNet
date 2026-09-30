@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>AdfDotNet.Json.Newtonsoft</PackageId>
+    <Description>Lossless Atlassian Document Format (ADF) JSON serialization for AdfDotNet, built on Newtonsoft.Json. Usable statically or through dependency injection.</Description>
+    <PackageTags>adf;atlassian;atlassian-document-format;jira;confluence;json;newtonsoft;serialization</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdfDotNet.Core\AdfDotNet.Core.csproj" />
+  </ItemGroup>
+
+</Project>

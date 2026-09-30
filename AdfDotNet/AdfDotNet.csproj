@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>AdfDotNet</PackageId>
+    <Description>Atlassian Document Format (ADF) for .NET: a typed document model, fluent builder, validation, and ADF conversion to and from HTML, Markdown and JSON. Meta-package that installs AdfDotNet.Core and every converter package.</Description>
+    <PackageTags>adf;atlassian;atlassian-document-format;jira;confluence;html;markdown;json;converter</PackageTags>
+    <!-- Meta-package: it carries no code of its own, only dependencies on Core and every satellite package. -->
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeSymbols>false</IncludeSymbols>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdfDotNet.Core\AdfDotNet.Core.csproj" />
+    <ProjectReference Include="..\AdfDotNet.Converters.Html\AdfDotNet.Converters.Html.csproj" />
+    <ProjectReference Include="..\AdfDotNet.Converters.Markdown\AdfDotNet.Converters.Markdown.csproj" />
+    <ProjectReference Include="..\AdfDotNet.Json.Newtonsoft\AdfDotNet.Json.Newtonsoft.csproj" />
+  </ItemGroup>
+
+</Project>

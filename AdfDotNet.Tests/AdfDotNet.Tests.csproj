@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net10.0;net472</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <!--
+      Markdig pulls in System.Memory/System.Buffers polyfills on netstandard2.0. Without binding-redirect
+      generation, the net472 test host resolves a different System.Memory version than the one Markdig was
+      built against and fails with FileLoadException at runtime (no such issue exists on net10.0, which has
+      these types in the BCL). Ignored on net10.0.
+    -->
+    <GenerateBindingRedirects>true</GenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <!--
+      Direct, explicit reference so NuGet resolves one consistent System.Memory version across the whole
+      graph instead of letting an older transitive version (pulled in by the xunit/vstest chain) collide
+      with the newer one Markdig needs - see the GenerateBindingRedirects comment above.
+    -->
+    <PackageReference Include="System.Memory" Version="4.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The AdfDotNet meta-package brings in Core and every satellite. -->
+    <ProjectReference Include="..\AdfDotNet\AdfDotNet.csproj" />
+  </ItemGroup>
+
+</Project>
