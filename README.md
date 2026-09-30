@@ -1,5 +1,8 @@
 # AdfDotNet
 
+[![NuGet](https://img.shields.io/nuget/v/AdfDotNet.svg)](https://www.nuget.org/packages/AdfDotNet/)
+[![NuGet downloads](https://img.shields.io/nuget/dt/AdfDotNet.svg)](https://www.nuget.org/packages/AdfDotNet/)
+
 A .NET document model for the Atlassian Document Format (ADF) — the JSON structure Jira and Confluence
 use for rich text. AdfDotNet gives you a typed ADF model, a fluent builder to compose documents in code,
 and converters to move between ADF, HTML, Markdown, and JSON.
@@ -13,8 +16,6 @@ var document = AdfDocumentBuilder.Build(doc => doc
         .Text(" and this is a ")
         .Text("link", m => m.Link("https://example.com"))
         .Text(".")));
-
-string json = document.ToJson(prettyPrint: true);
 ```
 
 ## Packages
@@ -24,11 +25,11 @@ you use. All packages target `netstandard2.0` (.NET Framework 4.6.2+, .NET Core 
 
 | Package | What it's for | Depends on |
 |---|---|---|
-| `AdfDotNet.Core` | The ADF document model, validation against the ADF spec, and the fluent builder | HtmlAgilityPack |
-| `AdfDotNet.Converters.Html` | HTML ↔ ADF conversion | Core, HtmlAgilityPack |
-| `AdfDotNet.Converters.Markdown` | Markdown ↔ ADF conversion | Core, Markdig |
-| `AdfDotNet.Json.Newtonsoft` | ADF ↔ JSON serialization | Core, Newtonsoft.Json |
-| `AdfDotNet` | Meta-package: references Core + every satellite | all of the above |
+| [`AdfDotNet.Core`](https://www.nuget.org/packages/AdfDotNet.Core/) | The ADF document model, validation against the ADF spec, and the fluent builder | HtmlAgilityPack |
+| [`AdfDotNet.Converters.Html`](https://www.nuget.org/packages/AdfDotNet.Converters.Html/) | HTML ↔ ADF conversion | Core, HtmlAgilityPack |
+| [`AdfDotNet.Converters.Markdown`](https://www.nuget.org/packages/AdfDotNet.Converters.Markdown/) | Markdown ↔ ADF conversion | Core, Markdig |
+| [`AdfDotNet.Json.Newtonsoft`](https://www.nuget.org/packages/AdfDotNet.Json.Newtonsoft/) | ADF ↔ JSON serialization | Core, Newtonsoft.Json |
+| [`AdfDotNet`](https://www.nuget.org/packages/AdfDotNet/) | Meta-package: references Core + every satellite | all of the above |
 
 ## Getting started
 
